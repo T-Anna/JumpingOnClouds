@@ -33,11 +33,13 @@ namespace JumpingOnClouds
 
         private static bool IsLongJumpPossible(int currentPosition, List<int> clouds)
         {
-            if (currentPosition + 2 >= clouds.Count)   
+            int nextPosition = currentPosition + 2;
+
+            if (nextPosition >= clouds.Count)   
             {                                          
                 return false; 
             }
-            return IsCumulus(clouds[currentPosition + 2]);       
+            return IsCumulus(clouds[nextPosition]);       
         }
 
         private static bool IsCumulus(int cloud)
